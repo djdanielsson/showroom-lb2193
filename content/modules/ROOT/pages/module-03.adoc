@@ -8,7 +8,7 @@ NOTE: From that point onwards we will be able to configure the Platform using th
 
 == Task 1 - Create our EE Definition
 
-- Create a file `+group_vars/all/ah_ee_list.yml+` where we will create a
+- Create a file `+group_vars/all/hub_ee_list.yml+` where we will create a
 list called `+ee_list+` that has 4 key things to set per item which are:
 +
 * `+name+` this is required and will be what the EE image will be called

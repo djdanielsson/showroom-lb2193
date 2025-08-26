@@ -164,7 +164,7 @@ controller_credentials:
     inputs:
       hostname: "{{ aap_hostname }}"
       username: "{{ aap_service_account_username }}"
-      token: "{{ ah_token }}"
+      token: "{{ hub_token }}"
       verify_ssl: false
 
   - name: hub_certified
@@ -172,28 +172,28 @@ controller_credentials:
     organization: config_as_code
     inputs:
       url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/rh-certified/"
-      token: "{{ ah_token }}"
+      token: "{{ hub_token }}"
 
   - name: hub_published
     credential_type:  "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
       url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/published/"
-      token: "{{ ah_token }}"
+      token: "{{ hub_token }}"
 
   - name: hub_community
     credential_type:  "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
       url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/community/"
-      token: "{{ ah_token }}"
+      token: "{{ hub_token }}"
 
   - name: hub_community_infra_repo
     credential_type:  "Ansible Galaxy/Automation Hub API Token"
     organization: config_as_code
     inputs:
       url: "https://{{ aap_hostname }}/pulp_ansible/galaxy/community-infra-repo/"
-      token: "{{ ah_token }}"
+      token: "{{ hub_token }}"
 
   - name: cr_ah
     credential_type: Container Registry
@@ -349,7 +349,7 @@ The next step is to create a playbook/file `playbooks/aap_config.yml` that will 
         ah_verify_ssl: false
     - name: Fixing format
       ansible.builtin.set_fact:
-        ah_token: "{{ ah_token['token'] }}"
+        hub_token: "{{ ah_token['token'] }}"
     - name: Call dispatch role
       ansible.builtin.include_role:
         name: infra.aap_configuration.dispatch
