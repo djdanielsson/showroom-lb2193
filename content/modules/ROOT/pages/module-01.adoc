@@ -187,7 +187,7 @@ aap_teams:
 [#service_account]
 == Task 7 - Create a local service account user
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/users.yml` with the below information:
+- Create a file `group_vars/all/users.yml` with the below information:
 +
 [source,yaml,role=execute]
 ----
