@@ -8,7 +8,7 @@ help you complete this task.
 
 == Task 1 - Configure settings
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/settings.yml` with the below content.
+- Create a file `group_vars/all/settings.yml` with the below content.
 + 
 [source,yaml,role=execute]
 ----
@@ -25,7 +25,7 @@ controller_settings:
 
 == Task 2 - Configure Execution Environments
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/execution_environments.yml` and add the required information to the list `controller_execution_environments`
+- Create a file `group_vars/all/execution_environments.yml` and add the required information to the list `controller_execution_environments`
 to include a new EE (that we will show how to create with code in the next module) called `config_as_code` with image path `{{ aap_hostname }}/config_as_code` that is pull `always` and uses the credential `cr_ah`.
 +
 image::module_2/config_ee.png[title="Config Execution Environment",125%,125%, link=self, window=blank]
@@ -57,7 +57,7 @@ NOTE: While you have not created this EE yet it, we have already added a version
 
 == Task 3 - Create credential types
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/credential_types.yml` where we will create a list called `controller_credential_types` that has 5 variables per item defined below:
+- Create a file `group_vars/all/credential_types.yml` where we will create a list called `controller_credential_types` that has 5 variables per item defined below:
 
 * `name` this is required and will be what the credential type will be
 called
@@ -140,7 +140,7 @@ controller_credential_types:
 
 == Task 4 - Create credentials
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/credentials.yml` and add the required information to the list `controller_credentials` to configure the UI to look like the screenshot. Make it to look like the screenshot, but make sure to use parameters for the values.
+- Create a file `group_vars/all/credentials.yml` and add the required information to the list `controller_credentials` to configure the UI to look like the screenshot. Make it to look like the screenshot, but make sure to use parameters for the values.
 *DO NOT PASTE YOUR PASSWORD IN CLEARTEXT FOR CREDENTIALS!*
 +
 [source,yaml,role=execute]
@@ -221,7 +221,7 @@ image::module_2/credential.png[title="Credential",125%,125%, link=self, window=b
 
 == Task 5 - Create organizations
 
-- Update the file `/home/lab-user/casc_lab/group_vars/all/organizations.yml` and add the required information to the list `aap_organizations` to configure the UI to look like the screenshot. Here we are adding the credentials that we created above to the Organization so we can pull collections from Automation Hub.
+- Update the file `group_vars/all/organizations.yml` and add the required information to the list `aap_organizations` to configure the UI to look like the screenshot. Here we are adding the credentials that we created above to the Organization so we can pull collections from Automation Hub.
 +
 image::module_2/orgs.png[title="Config as Code Organization",125%,125%, link=self, window=blank]
 +
@@ -238,7 +238,7 @@ aap_organizations:
 
 == Task 6 - Create projects
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/projects.yml` and add the required
+- Create a file `group_vars/all/projects.yml` and add the required
 information to the list `controller_projects` to configure the UI to
 look like the screenshot. The project you want to use is
 +
@@ -267,7 +267,7 @@ image::module_2/project.png[title="Project",125%,125%, link=self, window=_blank]
 
 == Task 7 - Create inventories
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/inventories.yml` and add the required
+- Create a file `group_vars/all/inventories.yml` and add the required
 information to the list `controller_inventories` to configure the UI
 to look like the screenshot
 +
@@ -286,7 +286,7 @@ image::module_2/inventories.png[title="Inventory",125%,125%, link=self, window=_
 
 == Task 8 - Create inventory sources
 
-- Add to file `/home/lab-user/casc_lab/group_vars/all/inventory_sources.yml` and a new variable with the required information to the list `controller_inventory_sources` to configure the UI to look like the screenshot
+- Add to file `group_vars/all/inventory_sources.yml` and a new variable with the required information to the list `controller_inventory_sources` to configure the UI to look like the screenshot
 +
 [source,yaml,role=execute]
 ----
@@ -303,7 +303,7 @@ image::module_2/inventory_sources.png[title="Inventory Sources",125%,125%, link=
 
 == Task 9 - Create job_templates
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/job_templates.yml` and add the required
+- Create a file `group_vars/all/job_templates.yml` and add the required
 information to the list `controller_templates` to configure the UI to like the screenshot. 
 +
 Pay attention to the credentials attached to each job template.

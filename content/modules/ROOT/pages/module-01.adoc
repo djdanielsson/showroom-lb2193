@@ -34,7 +34,7 @@ ansible-galaxy collection install infra.ee_utilities:4.0.0 infra.aap_configurati
 
 - Set the `variables` to be used in the collections for use. These include hosts, usernames, and other variables that are reused in each role.
 
-- The variables are defined in the file `/home/lab-user/casc_lab/group_vars/all/auth.yml`. 
+- The variables are defined in the file `group_vars/all/auth.yml`. 
 +
 [source,yaml,role=execute]
 group_vars/all/auth.yml
