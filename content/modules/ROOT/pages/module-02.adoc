@@ -328,7 +328,7 @@ image::module_2/build_ee_template_v2.png[title="Build EE Template",125%,125%, li
 
 - We need to create a token from Automation Hub so that we can provide it to the Platform for the collection syncing to take place.
 +
-The next step is to create a playbook/file `/home/lab-user/casc_lab/playbooks/aap_config.yml` that will call the aap_configuration dispatch role which will apply all provided configurations in the order that they need to be created.
+The next step is to create a playbook/file `playbooks/aap_config.yml` that will call the aap_configuration dispatch role which will apply all provided configurations in the order that they need to be created.
 +
 [source,yaml,role=execute]
 ----

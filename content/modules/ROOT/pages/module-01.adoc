@@ -248,7 +248,7 @@ hub_configuration_collection_repository_sync_async_retries: 150
 [#playbook_create]
 == Task 9 - Create a playbook to apply the configuration
 
-- The next step is to create the `/home/lab-user/casc_lab/playbooks/aap_config.yml` playbook. This playbook will execute the `aap_configuration` dispatch role, applying the provided configurations in the necessary order.
+- The next step is to create the `playbooks/aap_config.yml` playbook. This playbook will execute the `aap_configuration` dispatch role, applying the provided configurations in the necessary order.
 +
 [source,yaml,role=execute]
 ----
