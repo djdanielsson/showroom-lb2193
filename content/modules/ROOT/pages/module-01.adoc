@@ -61,7 +61,7 @@ ee_base_registry_password: "{{ aap_password }}"
 ee_validate_certs: false
 ----
 
-WARNING: Do not replace the aap_hostname variable but past this below it
+WARNING: Do not replace the content that is already in this file but append/paste below it.
 
 - Further documentation are provided below for those who are interested to learn more:
 
