@@ -246,6 +246,8 @@ look like the screenshot. The project you want to use is
 https://github.com/redhat-cop/aap_configuration_template
 ----
 +
+WARNING: There are some values such as `project base path`, `playbook directory`, and `source control version`
+
 NOTE: You will want to refer to the role documentation to determine which options need to be set
 // TODO - What git project are we pointing at? Also, perhaps consider providing a table with the values they need to set so they can at least copy/paste URLs etc, but still have to look up the options required
 +
