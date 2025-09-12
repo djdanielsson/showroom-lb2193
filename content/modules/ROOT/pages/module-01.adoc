@@ -34,7 +34,7 @@ ansible-galaxy collection install infra.ee_utilities:4.0.0 infra.aap_configurati
 
 - Set the `variables` to be used in the collections for use. These include hosts, usernames, and other variables that are reused in each role.
 
-- The variables are defined in the file `/home/lab-user/casc_lab/group_vars/all/auth.yml`. 
+- The variables are defined in the file `group_vars/all/auth.yml`. 
 +
 [source,yaml,role=execute]
 group_vars/all/auth.yml
@@ -60,6 +60,8 @@ ee_base_registry_username: "{{ aap_username }}"
 ee_base_registry_password: "{{ aap_password }}"
 ee_validate_certs: false
 ----
+
+WARNING: Do not replace the content that is already in this file but append/paste below it.
 
 - Further documentation are provided below for those who are interested to learn more:
 
@@ -187,7 +189,7 @@ aap_teams:
 [#service_account]
 == Task 7 - Create a local service account user
 
-- Create a file `/home/lab-user/casc_lab/group_vars/all/users.yml` with the below information:
+- Create a file `group_vars/all/users.yml` with the below information:
 +
 [source,yaml,role=execute]
 ----
@@ -248,7 +250,7 @@ hub_configuration_collection_repository_sync_async_retries: 150
 [#playbook_create]
 == Task 9 - Create a playbook to apply the configuration
 
-- The next step is to create the `/home/lab-user/casc_lab/playbooks/aap_config.yml` playbook. This playbook will execute the `aap_configuration` dispatch role, applying the provided configurations in the necessary order.
+- The next step is to create the `playbooks/aap_config.yml` playbook. This playbook will execute the `aap_configuration` dispatch role, applying the provided configurations in the necessary order.
 +
 [source,yaml,role=execute]
 ----

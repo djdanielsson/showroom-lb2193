@@ -8,7 +8,7 @@ NOTE: From that point onwards we will be able to configure the Platform using th
 
 == Task 1 - Create our EE Definition
 
-- Create a file `+/home/lab-user/casc_lab/group_vars/all/ah_ee_list.yml+` where we will create a
+- Create a file `+group_vars/all/hub_ee_list.yml+` where we will create a
 list called `+ee_list+` that has 4 key things to set per item which are:
 +
 * `+name+` this is required and will be what the EE image will be called
@@ -71,7 +71,7 @@ ee_create_controller_def: true
 
 == Task 2 - Double check your Execution Environments
 
-- Check the file `/home/lab-user/casc_lab/group_vars/all/execution_environments.yml` and add make sure the `config_as_code` execution environment is there, you can also look in the gui.
+- Check the file `group_vars/all/execution_environments.yml` and add make sure the `config_as_code` execution environment is there, you can also look in the gui.
 It should be listed with image path `{{ aap_hostname }}/config_as_code` that is pull `always` and uses the credential `cr_ah`.
 +
 [source,yaml,role=execute]
@@ -136,13 +136,6 @@ on ansible-playbook]
 podman login #aap_hostname
 podman push ##aap_hostname##/config_as_code
 ----
-
-== Task 6 - See the Results
-
-- Navigate to the AAP login with the provided passwords
-
-- In each applications respective Execution Environment section on the left side you should find the `+config_as_code+` Execution Environment.
-
 
 == ✅ Next Challenge
 
