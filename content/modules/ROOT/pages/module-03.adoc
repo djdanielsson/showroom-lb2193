@@ -57,7 +57,7 @@ prepend_galaxy:
   - COPY _build/configs/ansible.cfg /etc/ansible/ansible.cfg
 
 ee_base_image: "{{ aap_hostname }}/ee-minimal-rhel8:latest"
-ee_image_push: true
+ee_image_push: false
 ee_prune_images: false
 ee_create_ansible_config: false
 ee_pull_collections_from_hub: false
@@ -136,13 +136,6 @@ on ansible-playbook]
 podman login #aap_hostname
 podman push ##aap_hostname##/config_as_code
 ----
-
-== Task 6 - See the Results
-
-- Navigate to the AAP login with the provided passwords
-
-- In each applications respective Execution Environment section on the left side you should find the `+config_as_code+` Execution Environment.
-
 
 == ✅ Next Challenge
 
